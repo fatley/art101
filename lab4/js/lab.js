@@ -1,6 +1,32 @@
 // index.js - purpose and description here
-// Author: Your Name
-// Date:
+// Author: Ashley Pham
+// Date: 16 October 2023
+// Rock Paper Scissors
+// An implementation of the game
+// aspham@ucsc.edu
+
+// countdown = ["rock, paper, scissors, shoot!"]
+
+
+// find_opponent
+// print("how many rounds do you want to play?")
+// rounds = input()
+
+// start.countdown 
+// player.input = (rock, paper, OR scissors)
+// opponent.input = (rock, paper, OR scissors)
+// if (player.input == rock and opponent.input == scissors) or
+//     (player.input == paper and opponent.input == rock) or
+//     (player.input == scissors and opponent.input == paper):
+//     print("you win!")
+// else if (player.input == opponent.input)
+//     print("tie game")
+// else
+//     print("you lose")
+
+
+
+
 
 // Constants
 
