@@ -4,6 +4,17 @@
 .minor-section {
     padding: 10px;
     margin-bottom: 10px;
-    border: solid 1px #888;
-    background-color: #DDD8C4;
+    border: solid 1px #010101;
+    background-color: white;
+  }
+
+  .car {
+    border: 0.5rem outset rgb(14, 3, 3);
+    outline: 0.5rem solid yellow;
+    box-shadow: 0 0 0 2rem black;
+    border-radius: 7.5em 5em;
+    margin: 2rem;
+    padding: 1rem;
+    outline-offset: 0.5rem;
+    float: right;
   }
