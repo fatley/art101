@@ -3,10 +3,10 @@
 // Date: 10/23/2023
 
 // Variables for Task 1
-make = Tesla;
+make = "Tesla";
 model = 3;
 year = 2018;
-color = black;
+color = "black";
 ownIt = true;
 
 // calculations
