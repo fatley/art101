@@ -1,23 +1,6 @@
 // index.js - purpose and description here
-// Author: Ashley Pham
-// Date: 10/23/2023
-
-// Variables for Task 1
-make = "Tesla";
-model = 3;
-year = 2018;
-color = "black";
-ownIt = true;
-// calculations
-age = 2023 - year; // age = 5
-
-// Documentations
-document.writeln("Make: " + make + "<br>");
-document.writeln("Model: " + model + "<br>");
-document.writeln("Color: " + color + "<br>");
-document.writeln("Year: " + year + "<br>");
-document.writeln("Age: " + age + " years<br>");
-
+// Author: Your Name
+// Date:
 
 // Constants
 
