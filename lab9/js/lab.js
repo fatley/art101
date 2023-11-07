@@ -1,49 +1,41 @@
-// index.js - Lab 8 JS file - dealing w/ functions and callbacks
+// index.js - Lab 9 JS file - dealing w/ libraries and jquery
 // Author: Ashley Pham
 // Date: Nov 6, 2023
 
-// Constants
+$(document).ready(function() {
+  $('.challenge').click(function() {
+      var challengeText = 'The challenge of this lab to to understand JavaScript libraries and to practice using them.'; // Replace this with the actual challenge text
+      var newParagraph = $('<p></p>').text(challengeText);
+      $(this).parent().append(newParagraph);
+  });
+});
 
-// Functions
+$(document).ready(function(){
+  $('.problem').click(function(){
+    var problemText = 'Some of the issues we ran into was trying to get the button to display the text. It is a bit confusing at first, but by initializing the text, and a new paragraph variable, we are able to use the append() function to add the paragraph after the user clicks the button.';
+    var newParagraph = $('<p></p>').text(problemText);
+    $(this).parent().append(newParagraph);
+  });
+});
 
-// square root func
-function mathing(x) {
-  return Math.sqrt(x);
+$(document).ready(function(){
+  $('.reflection').click(function(){
+    var reflectionText = 'This lab showed me how important JS libraries can be. Different libraries can help with modularization and help with readability. It is a little overwhelming to learn all the content in the different libraries, but it is important to know how to use them.';
+    var newParagraph = $('<p></p>').text(reflectionText);
+    $(this).parent().append(newParagraph);
+  })
+});
+
+// this is an example function and this comment tells what it doees and what parameters are passed to it.
+function myFunction(param1, param2) {
+  // some code here
+  // return results;
 }
 
-// print satements
-console.log("The square root of 25 is ", mathing(25));
-console.log("The square root of 121 is ", mathing(121));
-console.log("The square root of 81 is ", mathing(81));
-
-// intializnig array of nums
-var arrayNum = [1, 2, 3, 4, 5, 6, 7,];
-console.log("My array: ", arrayNum);
-
-// using map to get square root of array
-console.log("The square root of my array is: ", arrayNum.map(mathing));
-
-// using map to get square of array
-var result = arrayNum.map(function(x) {
-  return x * x;
-})
-console.log("My array squared is: ", result);
-
-
-// bonus task
 function main() {
   console.log("Main function started.");
-  // using get element ID to print arrayNum, results, and mathing
-  document.getElementById("array").innerHTML = "My array: " + arrayNum;
-  document.getElementById("squared").innerHTML = "My array squared is: " + result;
-  document.getElementById("squareRoot").innerHTML = "The square root of my array is: " + arrayNum.map(mathing);
+  // the code that makes everything happen
 }
 
-
-// We started this lab early so if we ran into any obstacles or challenges, we would have a bigger window to solve the problem. This lab was pretty straightfoward
-// because we've been doing many practices in class. We did have some syntax errors because we were just being careless, however we managed to clean up
-// our code and get it to work. Also, the bonus task was a bit of a challenge at first. We had to look up what getElementById() was and how to use it. 
-// Eventually, by using window.onload, we were able to get the bonus task to work. Overall, this lab was pretty easy and we were able to finish it in a timely manner.
-
 // let's get this party started
-window.onload = main;
+main();
