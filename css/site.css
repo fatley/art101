@@ -4,7 +4,7 @@
 
 /* we can select an html element tag, in this case "body" will apply to the whole document */
 body {
-  background-color: #070808;
+  background-color: #2ee7e7;
 }
 
 /* we can have rules apply to multiple elements at the same time with commas */
@@ -23,7 +23,7 @@ h1 {
 #content {
   margin: 20px;
   padding: 20px;
-  border: solid 1px #ff0505;
+  border: solid 31px #2b05ff;
   background-color: rgb(250, 251, 248);
 }
 
@@ -33,4 +33,35 @@ h1 {
   margin-bottom: 10px;
   border: solid 1px #888;
   background-color: #A3C9A8;
+}
+
+
+a.cloud-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #fff;
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+a.cloud-link:before,
+a.cloud-link:after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+a.cloud-link:before {
+  top: -35px;
+  left: -30px;
+}
+
+a.cloud-link:after {
+  top: 15px;
+  right: -30px;
 }
