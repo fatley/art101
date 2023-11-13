@@ -26,12 +26,6 @@ function randReply() {
   return sentences[index];
 }
 
-// click listener for button
-// $("#make-convo").click(function(){
-//   const newText = generateRandomText();
-//   $("#output").append('<div class="text"><p>' + newText + '</p></div>');
-// });
-
 let isLeft = true;
 
 $("#make-convo").click(function(){
