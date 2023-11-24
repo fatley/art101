@@ -7,6 +7,10 @@
   padding: 10px;
   border: solid 30px pink;
   background-color: #ffffff;
+  min-height: 100px; /* Set a minimum height */
+  height: auto; /* Allow the box to grow */
+  overflow: auto; /* Add this line */
+
 }
 
 /* grey left bubble */
@@ -36,10 +40,9 @@
   float: right;
   clear: both;
 }
-
 .make-convo {
   background-color: lavender;
-  border-radius: 5 px;
+  border-radius: 5px;
   color: white;
   font-weight: bold;
   padding: 5px;

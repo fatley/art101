@@ -36,5 +36,6 @@ $("#make-convo").click(function(){
   } else {
     $("#output").append('<div class="text-right"><p>' + newReply + '</p></div>');
   }
+  $("#output").append('<div style="clear: both;"></div>');
   isLeft = !isLeft;
 });

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 10 - JavaScript for the Web</title>
+	<title>Lab 11 - JavaScript Event and Forms</title>
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
@@ -15,34 +15,24 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+	 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+	<script src="https://sdk.scdn.co/spotify-player.js"></script>
+
 </head>
 
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab 10 - JavaScript for the Web</h1>
-			<div id="challenge">
-					<h2>Challenge</h2>
-					<p> The challenge of this lab was to experiment with modifying the DOM and make a fake dialogue.
-					</p>
+			<!-- map creation -->
+			<h1>Music Map</h1>
+			<div id="mapid" style="height: 600px;">
 			</div>
-
-			<div id="problems">
-					<h2>Problems</h2>
-					<p> Some problems that arose during this lab was trying to get the button to generate a random text that was
-						short or long to mimic that of a real conversation between people. In addition, I wanted to play around with
-						the CSS to mimic that of a iMessage conversation by having it change from blue and white.  
-					</p>
-			</div>
-
-			<div id="output">
-					<h2>Results</h2>
-					<p> Press the button below to start the conversation!
-					</p>
-			</div>
-			<button id="make-convo">Say Something</button>
-
 		</section>
 	</main>
 
@@ -52,3 +42,5 @@
 	
 </body>
 </html>
+
+
