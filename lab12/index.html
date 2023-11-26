@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Lab 11 - JavaScript Event and Forms</title>
+	<!-- Use UTF character set, a good idea with any webpage -->
+  	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Include a sitewide CSS file for consistent styling across the site -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<!-- Lab-specifc CSS file for any special styling of this particular page -->
+	<link rel="stylesheet" type="text/css" href="css/lab.css">
+	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
+	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+</head>
+
+<body>
+	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+	<main id="content">
+		<section>
+			<h1>Lab 13 - Loops</h1>
+			<div id="challenge">
+					<h2>Challenge</h2>
+					<p> The challenge of this lab is practice loops by creating a function that loops through a list of numbers and prints a message if the number is a multiple of 3, 5, or 7.
+					</p>
+			</div>
+
+			<div id="problems">
+					<h2>Problems</h2>
+					<p> One of the problems we ran into was just making the print statements look nice. We wanted to kind of replicate how the example had columns
+						of numbers instead of one big list so we had to figure out how to do that. In addition, we had to figure out how to include the "-" in the output
+						because it looked really messy without one.
+						Also, after doing the bonus, it was a little difficult to do the form for the factors since there were so many different values to look out for.
+					</p>
+			</div>
+			<form id="max-number-form">
+				<label for="max-number">Where should we stop? </label>
+				<input type="number" id="max-number" name="max-number" min="1" value="200">
+				<input type="submit" value="Submit">
+			</form>
+			<form id="factors">
+				<div class="factor-row">
+				  <div class="factor-column">
+					<label for="factor1">Factor: </label>
+					<input type="number" id="factor1" name="factor1" min="1" value="3">
+					<label for="text1">What should it print? </label>
+					<input type="text" id="text1" name="text1" value="Fizz">
+				  </div>
+			  
+				  <div class="factor-column">
+					<label for="factor2">Factor: </label>
+					<input type="number" id="factor2" name="factor2" min="1" value="5">
+					<label for="text2">What should it print? </label>
+					<input type="text" id="text2" name="text2" value="Buzz">
+				  </div>
+			  
+				  <div class="factor-column">
+					<label for="factor3">Factor: </label>
+					<input type="number" id="factor3" name="factor3" min="1" value="7">
+					<label for="text3">what sohuld it print? </label>
+					<input type="text" id="text3" name="text3" value="Boom">
+				  </div>
+				</div>
+			  
+				<input type="submit" value="Submit">
+			</form>
+			  
+			<div id="key">
+				<h2>Original Key</h2>
+				<div class="key-row">
+				  <div class="key-column">
+					<p><strong>Factor:</strong></p>
+					<p>3</p>
+					<p>5</p>
+					<p>7</p>
+				  </div>
+				  <div class="key-column">
+					<p><strong>Prints What:</strong></p>
+					<p>Fizz</p>
+					<p>Buzz</p>
+					<p>Boom</p>
+				  </div>
+				</div>
+			  </div>
+			<div id="output">
+					<h2>Results</h2>
+					<p> The results should be printed in the output</p>
+			</div>
+		</section>
+	</main>
+
+	<div class = "home">
+		<!-- <p><a href="../index.html" class="cloud-link">BACK TO HOMEPAGE</a></p> -->
+    </div>
+	
+</body>
+</html>
+
+
