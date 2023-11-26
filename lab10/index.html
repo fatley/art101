@@ -2,54 +2,53 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 9 - Libraries & jQuery</title>
-
+	<title>Lab 10 - JavaScript for the Web</title>
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	
 	<!-- Include a sitewide CSS file for consistent styling across the site -->
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="css/lab.css">
-	
 	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
 </head>
+
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab 9 - Libraries & jQuery</h1>
-			<div class="minor-section">
+			<h1>Lab 10 - JavaScript for the Web</h1>
+			<div id="challenge">
 					<h2>Challenge</h2>
-					<p> <button class ="challenge">CLick me to read challenges!!</button>
+					<p> The challenge of this lab was to experiment with modifying the DOM and make a fake dialogue.
 					</p>
 			</div>
 
-			<div class="minor-section">
+			<div id="problems">
 					<h2>Problems</h2>
-					<p> <button class ="problem">Click me to read problems!!</button> 
+					<p> Some problems that arose during this lab was trying to get the button to generate a random text that was
+						short or long to mimic that of a real conversation between people. In addition, I wanted to play around with
+						the CSS to mimic that of a iMessage conversation by having it change from blue and white.  
 					</p>
 			</div>
 
-			<div class="minor-section">
-					<h2>Reflection</h2>
-					<p><button class = "reflection">Click me to read the reflections!</button></p>
-			</div>
-
-			<div class="minor-section">
+			<div id="output">
 					<h2>Results</h2>
-					<div id ="output">
-					</div>
+					<p> Press the button below to start the conversation!
+					</p>
 			</div>
+			<button id="make-convo">Say Something</button>
+
 		</section>
-		<nav id="links">
-			<!-- Put links to other pages (including the homepage) here. -->
-		</nav>
 	</main>
+
+	<div class = "home">
+		<!-- <p><a href="../index.html" class="cloud-link">BACK TO HOMEPAGE</a></p> -->
+    </div>
+	
 </body>
 </html>

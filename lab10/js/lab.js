@@ -1,5 +1,5 @@
 // index.js - Using jQuery, appends new elements to an output div
-// Author: Michelle Wang
+// Author: Ashley Pham
 // Date:11/13/2023
 
 function generateRandomText() {
@@ -13,12 +13,29 @@ function generateRandomText() {
   return text.slice(randStart, randStart + randLen);
 }
 
-// click listener for button
+const sentences = [
+  "I don't understand what you're saying...",
+  "What???",
+  "I'm confused...",
+  "Is there a translator nearby?",
+  "Huh?"
+];
+
+function randReply() {
+  const index = Math.floor(Math.random() * sentences.length);
+  return sentences[index];
+}
+
+let isLeft = true;
+
 $("#make-convo").click(function(){
+  const newText = generateRandomText();
+  const newReply = randReply();
+  if (isLeft) {
+    $("#output").append('<div class="text-left"><p>' + newText + '</p></div>');
+  } else {
+    $("#output").append('<div class="text-right"><p>' + newReply + '</p></div>');
+  }
+  $("#output").append('<div style="clear: both;"></div>');
+  isLeft = !isLeft;
 });
-
-// get new fake dialogue
-const newText = generateRandomText();
-
-// append a new div to our output div
-$("#output").append('<div class="text"><p>' + newText + '</p></div>');
