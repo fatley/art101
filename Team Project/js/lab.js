@@ -8,8 +8,8 @@
 */
 
 // loads the map and centers on SC
-var mymap = L.map('mapid').setView([36.9741, -122.0308], 13);
-
+// var mymap = L.map('mapid').setView([36.9741, -122.0308], 13);
+var mymap = L.map('mapid').setView([34.0522, -118.2437], 13);
 // loads the map tiles
 // z - zoom level, x - x cord, y - y cord
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -73,18 +73,26 @@ window.playTrack = function() {
   });
 }
 
+// LAmarker.on('click', function(){
+//   fetch('https://api.spotify.com/v1/me/player/play?device_id=' + deviceId, {
+//     method: 'PUT',
+//     body: JSON.stringify({uris: ['spotify:track:4xhsWYTOGcal8zt0J161CU']}),
+//     headers:{
+//       'Content-Type': 'application/json',
+//       'Authorization': 'Bearer ' + token
+//     }
+//   }).then(() => {
+//     LAmarker.bindPopup(`
+//       <b>Song Name</b><br>
+//       <button onclick="window.playTrack()">${isPlaying ? 'Pause' : 'Play'}</button>
+//     `).openPopup();
+//   });
+// })
+
 LAmarker.on('click', function(){
-  fetch('https://api.spotify.com/v1/me/player/play?device_id=' + deviceId, {
-    method: 'PUT',
-    body: JSON.stringify({uris: ['spotify:track:4xhsWYTOGcal8zt0J161CU']}),
-    headers:{
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
-    }
-  }).then(() => {
-    LAmarker.bindPopup(`
-      <b>Song Name</b><br>
-      <button onclick="window.playTrack()">${isPlaying ? 'Pause' : 'Play'}</button>
-    `).openPopup();
-  });
-})
+  LAmarker.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/1BxfuPKGuaTgP7aM0Bbdwr?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `).openPopup();
+});
