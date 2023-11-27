@@ -9,36 +9,47 @@
 
 function FizzBuzz(maxNumber, factors) {
   var output = "";
+  // iterates from 1 to whatever user inputs
   for (let i = 1; i <= maxNumber; i++) {
-    // Start a new column every 20 numbers
+
+    // organizes the results into columns of 20
     if (i % 20 == 1) {
       output += '<div class="column">';
     }
 
+    // adds a "-" if there is a print after number
     output += i + " - ";
-    let found = false;
 
+    // checks if the number is divisible by any of the factors
+    let multipler = false;
+
+    // deals with factors
+    // iterates thru the factors and checks if the number is divisible by any of them
     for (let j = 0; j < factors.length; j++) {
       if (i % factors[j].factor == 0) {
         output += factors[j].text;
-        found = true;
+        multipler = true;
       }
     }
 
-    output += found ? '!<br>' : '<br>';
+    // adds newline after each number
+    output += multipler ? '!<br>' : '<br>';
 
-    // End the column every 20 numbers
+    // closes the column after 20 numbers
     if (i % 20 == 0) {
       output += '</div>';
     }
   }
-  // Close the last column if it wasn't closed inside the loop
+
+
+  // handles if user input number is not divisible by 20
   if (maxNumber % 20 != 0) {
     output += '</div>';
   }
   return output;
 }
 
+// handles max # form
 document.getElementById('max-number-form').addEventListener('submit', function(event) {
   event.preventDefault();
   var maxNumber = Number(document.getElementById('max-number').value);
@@ -50,6 +61,7 @@ document.getElementById('max-number-form').addEventListener('submit', function(e
   document.getElementById('output').innerHTML = FizzBuzz(maxNumber, factors);
 });
 
+// handles factor form
 document.getElementById('factors').addEventListener('submit', function(event) {
   event.preventDefault();
   var factors = [
