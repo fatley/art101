@@ -19,6 +19,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // adding a marker to the map 
 var LAmarker = L.marker([34.0522, -118.2437]).addTo(mymap);
+LAmarker.area = "Los Angeles";
 // add cities
 var ParisMarker = L.marker([48.8566, 2.3522]).addTo(mymap);
 var BarcelonaMarker = L.marker([41.3874, 2.1686]).addTo(mymap);
@@ -46,23 +47,7 @@ player.addListener('player_state_changed', state => {
 });
 };
 
-// click event listener for the marker
-// LAmarker.on('click', function(){
-//   fetch('https://api.spotify.com/v1/me/player/play?device_id=' + deviceId, {
-//     method: 'PUT',
-//     body: JSON.stringify({uris: ['spotify:track:4xhsWYTOGcal8zt0J161CU']}),
-//     headers: {
-//       'Content-Type': 'application/json',
-//       'Authorization': 'Bearer ' + token
-//     }
-//   }).then(response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP Error: Status Code: ${response.status}`);
-//     }
-//   }).catch(e => {
-//     console.log('There was a problem w/ the fetch op: ' + e.message);
-//   })
-// });
+
 window.playTrack = function() {
   fetch(`https://api.spotify.com/v1/me/player/${isPlaying ? 'pause' : 'play'}?device_id=${deviceId}`, {
     method: 'PUT',
@@ -73,25 +58,11 @@ window.playTrack = function() {
   });
 }
 
-// LAmarker.on('click', function(){
-//   fetch('https://api.spotify.com/v1/me/player/play?device_id=' + deviceId, {
-//     method: 'PUT',
-//     body: JSON.stringify({uris: ['spotify:track:4xhsWYTOGcal8zt0J161CU']}),
-//     headers:{
-//       'Content-Type': 'application/json',
-//       'Authorization': 'Bearer ' + token
-//     }
-//   }).then(() => {
-//     LAmarker.bindPopup(`
-//       <b>Song Name</b><br>
-//       <button onclick="window.playTrack()">${isPlaying ? 'Pause' : 'Play'}</button>
-//     `).openPopup();
-//   });
-// })
 
 LAmarker.on('click', function(){
   LAmarker.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${this.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/1BxfuPKGuaTgP7aM0Bbdwr?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `).openPopup();
