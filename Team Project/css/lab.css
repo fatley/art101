@@ -22,13 +22,12 @@
 }
 
 .modal-content {
-  background-color: #f9f9f9; /* Light grey background */
+  background-color: #f9f9f9; 
   margin: 15% auto;
-  padding: 40px; /* More padding */
+  padding: 40px;
   border: 1px solid #888;
-  width: 50%; /* Less width for a smaller modal */
-  border-radius: 10px; /* Rounded corners */
-  font-family: Arial, sans-serif; /* Change the font */
+  width: 50%; 
+  border-radius: 10px; 
 }
 .close {
   color: #aaa;
