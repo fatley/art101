@@ -41,35 +41,36 @@
 					<p>GOTTA CATCH 'EM ALL! Choose your pokemon below!
 					</p>
 			</div>
-			<div id="output">
-				<button id="activate">Choose Your Pokemon!</button>
-				<img id="activate" src="img/pokeball.png" alt="Choose your pokemon!">
-			</div>
-			<div id="output2">
-			</div>
-			<script>
-				document.getElementById('activate').addEventListener('click', function() {
-					var randomPokemon = Math.floor(Math.random() * 898) + 1;
-					fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemon}`)
-					.then(response => response.json())
-					.then(data => {
-						document.getElementById('output2').innerHTML = `
-						<p>${data.name}</p><br>
-						<p>${data.types[0].type.name}</p>
-						<p><img src="${data.sprites.front_default}" alt="${data.name}"></p?`;
-					})
-					
-					.catch(error => console.log(error));
-				}) 			
-				</script>
-		</section>
-	</main>
+            <div id="output">
+                <button id="activate" style="display: none;">Choose Your Pokemon!</button>
+                <img id="pokeball" src="img/pokeball.png" alt="Choose your pokemon!" style="display: block; margin: auto; width: 100px; height: 100px;">
+            </div>
+            <div id="output2">
+            </div>
+            <script>
+                document.getElementById('activate').addEventListener('click', function() {
+                    var randomPokemon = Math.floor(Math.random() * 898) + 1;
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemon}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        document.getElementById('output2').innerHTML = `
+                        <p>${data.name}</p><br>
+                        <p>${data.types[0].type.name}</p>
+                        <p><img src="${data.sprites.front_default}" alt="${data.name}"></p?`;
+                    })
+                    .catch(error => console.log(error));
+                }) 
 
-	<div class = "home">
-		<p><a href="../index.html" class="cloud-link">BACK TO HOMEPAGE</a></p>
+                document.getElementById('pokeball').addEventListener('click', function() {
+                    document.getElementById('activate').click();
+                });
+            </script>
+        </section>
+    </main>
+
+    <div class = "home">
+        <p><a href="../index.html" class="cloud-link">BACK TO HOMEPAGE</a></p>
     </div>
-	
+    
 </body>
 </html>
-
-
