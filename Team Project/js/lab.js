@@ -20,55 +20,203 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 // adding a marker to the map 
 var LAmarker = L.marker([34.0522, -118.2437]).addTo(mymap);
 LAmarker.area = "Los Angeles";
-// add cities
-var ParisMarker = L.marker([48.8566, 2.3522]).addTo(mymap);
-var BarcelonaMarker = L.marker([41.3874, 2.1686]).addTo(mymap);
+var Paris = L.marker([48.8566, 2.3522]).addTo(mymap);
+Paris.area = "Paris";
+var Barcelona = L.marker([41.3874, 2.1686]).addTo(mymap);
+Barcelona.area = "Barcelona";
+var Amsterdam = L.marker([52.3676, 4.9041]).addTo(mymap);
+Amsterdam.area = "Amsterdam";
+var Berlin = L.marker([52.5200, 13.4050]).addTo(mymap);
+Berlin.area = "Berlin";
+var Chicago = L.marker([41.8781, -87.6298]).addTo(mymap);
+Chicago.area = "Chicago";
+var Istanbul = L.marker([41.0082, 28.9784]).addTo(mymap);
+Istanbul.area = "Istanbul";
+var Toronto = L.marker([43.6532, -79.3832]).addTo(mymap);
+Toronto.area = "Toronto";
+var SaoPaulo = L.marker([-23.5505, -46.6333]).addTo(mymap);
+SaoPaulo.area = "Sao Paulo";
+var Sydney = L.marker([-33.8688, 151.2093]).addTo(mymap);
+Sydney.area = "Sydney";
+var Santiago = L.marker([-33.4489, -70.673676]).addTo(mymap);
+Santiago.area = "Santiago";
+var NYC = L.marker([40.7128, -74.0060]).addTo(mymap);
+NYC.area = "New York City";
+var MexicoCity = L.marker([19.4326, -99.1332]).addTo(mymap);
+MexicoCity.area = "Mexico City";
+var Madrid = L.marker([40.4168, -3.7038]).addTo(mymap);
+Madrid.area = "Madrid";
+var London = L.marker([51.5074, -0.1278]).addTo(mymap);
+London.area = "London";
+var Jakarta = L.marker([-6.1751, 106.8650]).addTo(mymap);
+Jakarta.area = "Jakarta";
 
-// spotify player
-// using spotify's web api to play music
-var deviceId;
-var isPlaying = false;
-const token = 'BQCaP4qZugjaUrLX_j4UAmLm6dRBrlqNF-ueKFoFLy0LeedAqxWDAKD5T2gAYwya3KrgyDIznaGTBIvb5nN9XGVHwMIZIriI9_DUBRgA-0dTBaLjS8BLyR3vIbzMJjColiFA6JV4TEAyK03BSwsI2flSUihnZLjkKD5gIlFVRYUzjdtPzsd04e7RFezSQO0g44ab';
-
-// spotify's given code to play music
-window.onSpotifyWebPlaybackSDKReady = () => {
-  const player = new Spotify.Player({
-    name: 'Web Playback SDK Quick Start Player',
-    getOAuthToken: cb => { cb(token); },
-    volume: 0.5
-  });
-
-player.connect();
-
-player.addListener('ready', ({device_id}) => {
-  deviceId = device_id;
-});
-
-player.addListener('player_state_changed', state => {
-  isPlaying = !state.paused;
-});
-};
-
-// play/pause button
-window.playTrack = function() {
-  fetch(`https://api.spotify.com/v1/me/player/${isPlaying ? 'pause' : 'play'}?device_id=${deviceId}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + token
-    }
-  });
-}
 
 // embedding the track onto the popup
-LAmarker.on('click', function(){
-  LAmarker.bindPopup(`
+// ADDING SPOTIFY TO CITY
+LAmarker.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${this.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/1BxfuPKGuaTgP7aM0Bbdwr?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    <h3>The top song for ${LAmarker.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
-  `).openPopup();
+  `);
+
+LAmarker.on('click', function(){
+  LAmarker.openPopup();
 });
+
+Amsterdam.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Amsterdam.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0NxfpRR1pmtGC9J61iHIIc?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `);
+Amsterdam.on('click', function(){
+  openPopup();
+});
+
+Paris.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Paris.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/1eldTykrnkEBLX41bk5eMw?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Paris.on('click', function(){
+  openPopup();
+});
+
+Barcelona.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Barcelona.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2HafqoJbgXdtjwCOvNEF14?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Barcelona.on('click', function(){
+  openPopup();
+});
+
+Berlin.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Berlin.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0bYg9bo50gSsH3LtXe2SQn?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Berlin.on('click', function(){
+  openPopup();
+});
+
+Chicago.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Chicago.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2EjXfH91m7f8HiJN1yQg97?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Chicago.on('click', function(){
+  openPopup();
+});
+
+Istanbul.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Istanbul.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/3auN910HHNYykQo8i9q5J1?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Istanbul.on('click', function(){
+  openPopup();
+});
+
+Toronto.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Toronto.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Toronto.on('click', function(){
+  openPopup();
+});
+
+SaoPaulo.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${SaoPaulo.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2InS5VWKJQbsFBKOsf1cJB?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+SaoPaulo.on('click', function(){
+  openPopup();
+});
+
+Sydney.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Sydney.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+    `)
+Sydney.on('click', function(){
+  openPopup();
+});
+
+Santiago.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Santiago.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6hwGwCfCwHoSJQw7AYPEQu?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+Santiago.on('click', function(){
+  openPopup();
+});
+
+NYC.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${NYC.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+NYC.on('click', function(){
+  openPopup();
+});
+
+MexicoCity.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${MexicoCity.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6CvTEtGagmzQvkUzzyKR9k?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+MexicoCity.on('click', function(){
+  openPopup();
+});
+
+Madrid.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Madrid.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2HafqoJbgXdtjwCOvNEF14?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+Madrid.on('click', function(){
+  openPopup();
+});
+
+London.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${London.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+London.on('click', function(){
+  openPopup();
+});
+
+Jakarta.bindPopup(`
+    <div style="width:600px; height:400px; margin: auto;">
+    <h3>The top song for ${Jakarta.area} is:</h3>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/7F4tV8SiUy6itZTdAzdafO?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+    </div>
+  `)
+Jakarta.on('click', function(){
+  openPopup();
+});
+
+
+
 
 window.onload = function() {
   alert("Welcome to Our Music Map!\n\nThis is our welcome message.");
