@@ -1,0 +1,79 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+#content {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  border: solid 3px steelblue;
+  background-color: #ffffff;
+  border-radius: 0px;
+  height:auto;
+  overflow:auto;
+}
+
+.wallpaper {
+  background-image: url(https://wallpapers.com/images/featured/black-and-white-comic-syylxu4dsw0d63r7.jpg);
+  background-color: slategray;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.output p {
+  font-family: "Consolas";
+  width: 50%;
+  font-size: medium;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.output h2 {
+  font-family: "Gill Sans";
+  padding-left: 10px;
+  text-align: left;
+}
+
+.output img {
+  padding-left:10px;
+  width: 30%;
+}
+
+@font-face {
+  font-family: "font";
+  src: url("../LaPicaDemo-LaPicaDemo.otf") format("opentype")
+  }
+
+h1 {
+  font-family: "font";
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-family: "font";
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+.linkbox {
+  padding: 5px;
+  font-size: 80%;
+}
+.homelink {
+  text-align: left;
+  position: relative;
+  left: 250px;
+  color: white;
+  font-family:"Consolas";
+  font-weight: bolder;
+}
+.sourcelink {
+  float: right;
+  position: relative;
+  right: 250px;
+  color: white;
+  font-family:"Consolas";
+  font-weight: bolder;
+}
