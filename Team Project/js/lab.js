@@ -7,15 +7,16 @@
    Date: Nov 13 2023
 */
 
-// loads the map and centers on SC
-var mymap = L.map('mapid').setView([36.9741, -122.0308], 13);
-// var mymap = L.map('mapid').setView([34.0522, -118.2437], 13);
+// map creation and centering
+var mymap = L.map('mapid').setView([0, 0], 2);
 // loads the map tiles
 // z - zoom level, x - x cord, y - y cord
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     maxZoom: 19,
 }).addTo(mymap);
+
+
 
 // adding a marker to the map 
 var LAmarker = L.marker([34.0522, -118.2437]).addTo(mymap);
