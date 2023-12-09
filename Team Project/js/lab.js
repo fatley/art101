@@ -57,7 +57,7 @@ Jakarta.area = "Jakarta";
 // ADDING SPOTIFY TO CITY
 LAmarker.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${LAmarker.area} is:</h3>
+    <h3 style="color: white;"> The top song for ${LAmarker.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `);
@@ -68,7 +68,7 @@ LAmarker.on('click', function(){
 
 Amsterdam.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Amsterdam.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Amsterdam.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0NxfpRR1pmtGC9J61iHIIc?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `);

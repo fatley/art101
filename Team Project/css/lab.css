@@ -109,3 +109,11 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .leaflet-popup-content-wrapper {
+    background: #333333 !important;
+  }
+  .music-map {
+    background-color: #1DB954;
+    border-radius: 20px; 
+}
