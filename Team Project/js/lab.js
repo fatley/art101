@@ -7,8 +7,26 @@
    Date: Nov 13 2023
 */
 
+
+window.onload = function() {
+  var modal = document.getElementById("myModal");
+  var span = document.getElementsByClassName("close")[0];
+
+  modal.style.display = "block";
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+}
+
 // map creation and centering
-var mymap = L.map('mapid').setView([0, 0], 2);
+var mymap = L.map('mapid').setView([0, 0], 3);
 // loads the map tiles
 // z - zoom level, x - x cord, y - y cord
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -78,7 +96,7 @@ Amsterdam.on('click', function(){
 
 Paris.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Paris.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Paris.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/1eldTykrnkEBLX41bk5eMw?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -88,7 +106,7 @@ Paris.on('click', function(){
 
 Barcelona.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Barcelona.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Barcelona.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2HafqoJbgXdtjwCOvNEF14?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -98,7 +116,7 @@ Barcelona.on('click', function(){
 
 Berlin.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Berlin.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Berlin.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0bYg9bo50gSsH3LtXe2SQn?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -108,7 +126,7 @@ Berlin.on('click', function(){
 
 Chicago.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Chicago.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Chicago.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2EjXfH91m7f8HiJN1yQg97?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -118,7 +136,7 @@ Chicago.on('click', function(){
 
 Istanbul.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Istanbul.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Istanbul.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/3auN910HHNYykQo8i9q5J1?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -128,7 +146,7 @@ Istanbul.on('click', function(){
 
 Toronto.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Toronto.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Toronto.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -138,7 +156,7 @@ Toronto.on('click', function(){
 
 SaoPaulo.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${SaoPaulo.area} is:</h3>
+    <h3 style="color: white;">The top song for ${SaoPaulo.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2InS5VWKJQbsFBKOsf1cJB?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -148,7 +166,7 @@ SaoPaulo.on('click', function(){
 
 Sydney.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Sydney.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Sydney.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
@@ -158,7 +176,7 @@ Sydney.on('click', function(){
 
 Santiago.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Santiago.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Santiago.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6hwGwCfCwHoSJQw7AYPEQu?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -168,7 +186,7 @@ Santiago.on('click', function(){
 
 NYC.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${NYC.area} is:</h3>
+    <h3 style="color: white;">The top song for ${NYC.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -178,7 +196,7 @@ NYC.on('click', function(){
 
 MexicoCity.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${MexicoCity.area} is:</h3>
+    <h3 style="color: white;">The top song for ${MexicoCity.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6CvTEtGagmzQvkUzzyKR9k?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -188,7 +206,7 @@ MexicoCity.on('click', function(){
 
 Madrid.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Madrid.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Madrid.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2HafqoJbgXdtjwCOvNEF14?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -198,7 +216,7 @@ Madrid.on('click', function(){
 
 London.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${London.area} is:</h3>
+    <h3 style="color: white;">The top song for ${London.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -208,7 +226,7 @@ London.on('click', function(){
 
 Jakarta.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
-    <h3>The top song for ${Jakarta.area} is:</h3>
+    <h3 style="color: white;">The top song for ${Jakarta.area} is:</h3>
       <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/7F4tV8SiUy6itZTdAzdafO?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
@@ -216,26 +234,3 @@ Jakarta.on('click', function(){
   openPopup();
 });
 
-
-
-
-window.onload = function() {
-  alert("Welcome to Our Music Map!\n\nThis is our welcome message.");
-}
-
-window.onload = function() {
-  var modal = document.getElementById("myModal");
-  var span = document.getElementsByClassName("close")[0];
-
-  modal.style.display = "block";
-
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-}
