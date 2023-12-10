@@ -234,3 +234,77 @@ Jakarta.on('click', function(){
   openPopup();
 });
 
+var legend = L.control({position: 'bottomright'});
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'info legend');
+  div.innerHTML +=
+      '<a href="#" id="LosAngeles" class="legend-item">Los Angeles</a><br>' +
+      '<a href="#" id="Paris" class="legend-item">Paris</a><br>' +
+      '<a href="#" id="Barcelona" class="legend-item">Barcelona</a><br>' +
+      '<a href="#" id="Amsterdam" class="legend-item">Amsterdam</a><br>' +
+      '<a href="#" id="Berlin" class="legend-item">Berlin</a><br>' +
+      '<a href="#" id="Chicago" class="legend-item">Chicago</a><br>' +
+      '<a href="#" id="Istanbul" class="legend-item">Istanbul</a><br>' +
+      '<a href="#" id="Toronto" class="legend-item">Toronto</a><br>' +
+      '<a href="#" id="SaoPaulo" class="legend-item">Sao Paulo</a><br>' +
+      '<a href="#" id="Sydney" class="legend-item">Sydney</a><br>' +
+      '<a href="#" id="Santiago" class="legend-item">Santiago</a><br>' +
+      '<a href="#" id="NewYorkCity" class="legend-item">New York City</a><br>' +
+      '<a href="#" id="MexicoCity" class="legend-item">Mexico City</a><br>' +
+      '<a href="#" id="Madrid" class="legend-item">Madrid</a><br>' +
+      '<a href="#" id="London" class="legend-item">London</a><br>' +
+      '<a href="#" id="Jakarta" class="legend-item">Jakarta</a><br>';
+  return div;
+};
+
+
+legend.addTo(mymap);
+
+document.getElementById('LosAngeles').addEventListener('click', function() {
+  mymap.flyTo([34.0522, -118.2437], 10);
+});
+document.getElementById('Paris').addEventListener('click', function() {
+  mymap.flyTo([48.8566, 2.3522], 10);
+});
+document.getElementById('Barcelona').addEventListener('click', function() {
+  mymap.flyTo([41.3874, 2.1686], 10);
+});
+document.getElementById('Amsterdam').addEventListener('click', function() {
+  mymap.flyTo([52.3676, 4.9041], 10);
+});
+document.getElementById('Berlin').addEventListener('click', function() {
+  mymap.flyTo([52.5200, 13.4050], 10);
+});
+document.getElementById('Chicago').addEventListener('click', function() {
+  mymap.flyTo([41.8781, -87.6298], 10);
+});
+document.getElementById('Istanbul').addEventListener('click', function() {
+  mymap.flyTo([41.0082, 28.9784], 10);
+});
+document.getElementById('Toronto').addEventListener('click', function() {
+  mymap.flyTo([43.6532, -79.3832], 10);
+});
+document.getElementById('SaoPaulo').addEventListener('click', function() {
+  mymap.flyTo([-23.5505, -46.6333], 10);
+});
+document.getElementById('Sydney').addEventListener('click', function() {
+  mymap.flyTo([-33.8688, 151.2093], 10);
+});
+document.getElementById('Santiago').addEventListener('click', function() {
+  mymap.flyTo([-33.4489, -70.673676], 10);
+});
+document.getElementById('NewYorkCity').addEventListener('click', function() {
+  mymap.flyTo([40.7128, -74.0060], 10);
+});
+document.getElementById('MexicoCity').addEventListener('click', function() {
+  mymap.flyTo([19.4326, -99.1332], 10);
+});
+document.getElementById('Madrid').addEventListener('click', function() {
+  mymap.flyTo([40.4168, -3.7038], 10);
+});
+document.getElementById('London').addEventListener('click', function() {
+  mymap.flyTo([51.5074, -0.1278], 10);
+});
+document.getElementById('Jakarta').addEventListener('click', function() {
+  mymap.flyTo([-6.1751, 106.8650], 10);
+});

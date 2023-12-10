@@ -139,3 +139,13 @@
 .music-map {
   border-radius: 10px; /* Adjust this value as needed */
 }
+
+
+.legend-item {
+  background-color: #1DB954;
+  padding: 5px;
+  margin: 2px;
+  display: block;
+  border-radius: 30px;
+  font-size: 14px;
+}
