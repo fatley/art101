@@ -7,7 +7,7 @@
    Date: Nov 13 2023
 */
 
-
+// popup
 window.onload = function() {
   var modal = document.getElementById("myModal");
   var span = document.getElementsByClassName("close")[0];
@@ -76,7 +76,9 @@ Jakarta.area = "Jakarta";
 LAmarker.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;"> The top song for ${LAmarker.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2EjXfH91m7f8HiJN1yQg97?utm_source=generator" 
+      width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; 
+      encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `);
 
@@ -87,7 +89,7 @@ LAmarker.on('click', function(){
 Amsterdam.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${Amsterdam.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0NxfpRR1pmtGC9J61iHIIc?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/0bYg9bo50gSsH3LtXe2SQn?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `);
 Amsterdam.on('click', function(){
@@ -107,7 +109,7 @@ Paris.on('click', function(){
 Barcelona.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${Barcelona.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2HafqoJbgXdtjwCOvNEF14?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/3BFh8rR6aMexy7ELu2UQy3?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
     `)
 Barcelona.on('click', function(){
@@ -177,7 +179,7 @@ Sydney.on('click', function(){
 Santiago.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${Santiago.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6hwGwCfCwHoSJQw7AYPEQu?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4GvEuYAfJlICR2SpMDaBxQ?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
 Santiago.on('click', function(){
@@ -187,7 +189,7 @@ Santiago.on('click', function(){
 NYC.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${NYC.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/2EjXfH91m7f8HiJN1yQg97?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
 NYC.on('click', function(){
@@ -197,7 +199,7 @@ NYC.on('click', function(){
 MexicoCity.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${MexicoCity.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6CvTEtGagmzQvkUzzyKR9k?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/6uIIdjYTxxpWOyWuVXrKQO?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
 MexicoCity.on('click', function(){
@@ -217,7 +219,7 @@ Madrid.on('click', function(){
 London.bindPopup(`
     <div style="width:600px; height:400px; margin: auto;">
     <h3 style="color: white;">The top song for ${London.area} is:</h3>
-      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/4xhsWYTOGcal8zt0J161CU?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
+      <br><iframe style="border-radius:15px;" src="https://open.spotify.com/embed/track/06qMRF18gwbOYYbnP2du6i?utm_source=generator" width="50%" height="100%" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></br>
     </div>
   `)
 London.on('click', function(){
@@ -234,6 +236,8 @@ Jakarta.on('click', function(){
   openPopup();
 });
 
+
+// legends - city
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'info legend');
